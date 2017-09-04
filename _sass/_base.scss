@@ -93,6 +93,10 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     font-size: 24pt;
 }
+.header--alternate {
+    color: white;
+    @include brand-font;
+}
 
 /**
  * Links
@@ -256,8 +260,13 @@ pre {
     }
 }
 .inner {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    // @include min-width(600px) {
+    //     padding-left: 10px;
+    //     padding-right: 10px;
+    // }
 
     max-width: 1200px;
     margin-left: auto;

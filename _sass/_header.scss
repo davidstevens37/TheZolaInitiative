@@ -15,20 +15,45 @@
   }
 }
   .site-header__logo {
-    max-width: 100px;
-    margin-left: 40px;
+    max-width: 100px;    
   }
   .navtoggle--icon {
-
+    float: left;
+    cursor: pointer;
   }  
+
+  .navtoggle-label {
+    @include min-width (580px) {
+      display: none;
+    }
+  }
+
 
   .site-header__nav {
     text-align: center;
+    display: none;
+    margin-top: 20px;
+    @include min-width (580px) {      
+      display: block;
+    }  
+    @include min-width (800px) {      
+      margin-top: 0;
+    }
+  }
+
+  #navtoggle:checked + .site-header__nav {
+    display: block;
   }
     .site-header__nav__link {
       color: $text-on-dark;
-      display: inline-block;
       padding: 10px;
       text-decoration: none;
+      display: block;
+      &:hover {
+        color: #bbb;
+      }
+      @include min-width (580px) {
+        display: inline-block;        
+      }
     }
   

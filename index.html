@@ -10,7 +10,7 @@ homepage: true
   <div class="vert-inner">
     <div class="inner">
 
-      <div class="">
+      <div id="ega" class="">
         <img class="ega" src="/images/ega.jpg" alt="EGA" />
       </div>
 
@@ -70,15 +70,15 @@ homepage: true
 
 <div class="section background-color">  
   <div class="events-container">
-    <div class="event event--one">
+    <div class="event event--one" style="background-image: url(/images/event-party.jpg)">
       <img class="event__icon" src="/images/event.png" />
       <div class="event__title brand-font">Coming Soon!</div>
     </div>
-    <div class="event event--one">
+    <div class="event event--two" style="background-image: url(/images/event-arch.png)">
       <img class="event__icon" src="/images/event.png" />
       <div class="event__title brand-font">Coming Soon!</div>
     </div>
-    <div class="event event--one">
+    <div class="event event--three" style="background-image: url(/images/event-lake.png)">
       <img class="event__icon" src="/images/event.png" />
       <div class="event__title brand-font">Coming Soon!</div>
     </div>
@@ -86,18 +86,4 @@ homepage: true
 </div>
 
 
-<div class="section call-to-action">
-  <div class="vert-inner">
-    <div class="inner">      
-      <h3 class="third header">
-        Looking to Help Out?
-      </h3>
-      <p class="third">
-        As we are in the beginning phases of our organization, we are relying heavily on individual donations to make our first outreach events and future fundraisers possible. Please donate and spread the word! Any amount helps!
-      </p>
-      <div class="third call-to-action-button-container">
-        <a href="/donate.html" class="button hero__button">Take Action</a>
-      </div>
-    </div>  
-  </div>
-</div>
+{% include call-to-action.html %}

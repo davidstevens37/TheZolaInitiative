@@ -15,7 +15,10 @@
     padding: 10px;
     text-decoration: none;
     display: block;
-    @include min-width (400px) {
+    &:hover {
+      color: #bbb;
+    }
+    @include min-width (550px) {
       display: inline-block;
     }
   }

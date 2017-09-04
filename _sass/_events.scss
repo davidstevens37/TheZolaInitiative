@@ -10,6 +10,8 @@
     color: $text-on-dark;
     border-bottom: 4px solid white;
     position: relative;
+    background-size: cover;
+    background-position: center;
     
     &:last-child {
       border-bottom: none;

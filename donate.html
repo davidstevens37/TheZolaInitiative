@@ -1,29 +1,58 @@
 ---
 layout: default
-page_title: About Us
-description: Find out how we're helping the veteran community become a better place
+page_title: Donate
+description: Thanks to you, we're able to build veteran community and help those who are stuggling.
+hero_image: /images/sunset-flag.jpg
 ---
+
+<div class="section background-secondary">
+  <div class="vert-inner">
+    <div class="inner">
+
+    </div>
+  </div>
+</div>
 
 <div class="section background-color">
   <div class="vert-inner">
     <div class="inner">
 
-
-      <form method="POST" action="https://www.paypal.com/cgi-bin/webscr">
+      
+      <form class="donate-form clearfix" method="POST" action="https://www.paypal.com/cgi-bin/webscr">
+        <h2 class="header header--alternate">Donate via PayPal</h2>
+        <p class="donate-text--alternate">Support our veterans and help bring bold ideas and actions that will drive change throughout the country.</p>
+        <p class="donate-text">Choose the amount you wish to donate</p>
         <input type="hidden" name="cmd" value="_donations">
         <input type="hidden" name="business" value="R67DAJEM9G7CG">
         <input type="hidden" name="item_name" value="Donation">
         <input type="hidden" name="currency_code" value="USD">
         <input type="hidden" name="tax" value="0">
-        <input type="radio" name="amount" value="10" />
-        <input type="radio" name="amount" value="50" />
-        <input type="radio" name="amount" value="100" />
-        <input type="radio" name="amount" value="500" />
-        <input type="radio" class="other-amount" name="amount" value="" />
+        <input type="hidden" name="return" value="http://thezolainitiative.org/thankyou.html">
+        <input type="hidden" name="cancel_return" value="http://thezolainitiative.org/cancel.html">
+        <input type="hidden" name="image_url" value="http://thezolainitiative.org/images/logo-ful.png">        
 
-        <label for="amount">Amount: </label><input type="text" class="other-amount-value">
+        <div id="donate-values" class="donate-form__values clearfix">
+          <input id="amount-10" class="amount-radio" type="radio" name="amount" value="10" checked="checked"/>
+          <label for="amount-10" class="amount-label">$10</label>
 
-        <input type="submit" name="submit" value="Pay with PayPal">
+          <input id="amount-50" class="amount-radio" type="radio" name="amount" value="50" />
+          <label for="amount-50" class="amount-label">$50</label>
+
+          <input id="amount-100" class="amount-radio" type="radio" name="amount" value="100" />
+          <label for="amount-100" class="amount-label">$100</label>
+
+          <input id="amount-500" class="amount-radio" type="radio" name="amount" value="500" />
+          <label for="amount-500" class="amount-label">$500</label>
+
+          <input id="amount-other" class="amount-radio amount-radio--other" type="radio" name="amount" value="" />
+          <div class="amount-other-value-container">
+            <label>Other: $</label>
+            <input id="amount-other-value" type="number" class="amount-other-value" placeholder="Amount" min=1 >
+          </div>
+
+        </div>
+
+        <button class="button--round">&rarr; Donate</button>
       </form>
 
 
@@ -32,14 +61,31 @@ description: Find out how we're helping the veteran community become a better pl
 </div>
 
 
+<div class="section background-secondary">
+  <div class="vert-inner">
+    <div class="inner">
+
+    </div>
+  </div>
+</div>
+
 
 <script>
-  document.querySelector('.other-amount-value').addEventListener('click', function() {
-    document.querySelector('.other-amount').checked = true;
-  });
+  (function(){
+    var textInput = document.getElementById('amount-other-value');
+    var radioInput = document.getElementById('amount-other');
+    var donateValues = document.getElementById('donate-values');
 
-  document.querySelector('.other-amount-value').addEventListener('keyup', function(e) {
-    document.querySelector('.other-amount').value = e.target.value;
-  console.log(e.target.value);
-  });
+    textInput.addEventListener('focus', function() {
+      radioInput.checked = true;
+    });
+    textInput.addEventListener('keyup', function(e) {
+      radioInput.value = e.target.value;  
+    });
+    donateValues.addEventListener('click', function(e) {
+      if (e.target.className === 'amount-label') {
+        textInput.value = '';
+      }
+    })
+  })();
 </script>

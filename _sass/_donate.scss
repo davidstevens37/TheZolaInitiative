@@ -1,0 +1,144 @@
+$form-medium: 440px;
+$form-large: 835px;
+
+.donate-form {
+  max-width: 200px;
+  @include min-width($form-medium) {
+    max-width: 400px;
+  }
+  @include min-width($form-large) {
+    max-width: 800px;
+  }
+  margin: auto;
+}
+  .donate-text {
+    color: white;
+  }
+  .donate-text--alternate {
+    color: $brand-color;
+  }
+
+  .amount-radio {
+    display: none;
+  }
+  .donate-form__values {
+    
+  }
+  .amount-label {
+    width: 100px;
+    height: 100px;
+    float: left;
+    color: #bbb;
+    font-size: 20pt;
+    padding-top: 35px;
+    text-align: center;
+    border-top: 1px solid $brand-color;
+    border-left: 1px solid $brand-color;
+    border-bottom: 1px solid $brand-color;
+    cursor: pointer;
+    @include brand-font();
+    &:nth-of-type(2n) {
+      border-right: 1px solid $brand-color;
+    }
+    @include min-width($form-medium) {
+      &:nth-of-type(2n) {
+        border-right: none;
+      }      
+      &:nth-of-type(4n) {
+        border-right: 1px solid $brand-color;
+      }      
+    }
+    @include min-width($form-large) {      
+      &:nth-of-type(4n) {
+        border-right: none;
+      }            
+    }
+    
+  }
+  .amount-radio:checked + .amount-other-value-container,
+  .amount-radio:checked + .amount-label {
+    color: white;
+    background-color: $brand-color;
+    @include box-shadow-brand();
+  }
+
+  .amount-other-value-container {
+    float: left;
+    position: relative;
+    height: 100px;
+    font-size: 20pt;
+    border-bottom: 1px solid $brand-color;    
+    border-right: 1px solid $brand-color;    
+    border-left: 1px solid $brand-color;    
+    color: #bbb;
+    width: 100%;       
+    height: 100px;
+    padding: 15px;
+    @include min-width($form-medium) {
+      padding: 0;
+    }
+    @include min-width($form-large) {
+      border-top: 1px solid $brand-color;    
+      width: 50%;      
+    }
+    @include brand-font();
+    & label {
+      text-align: center;
+      color: inherit;
+      @include min-width($form-medium) {
+        position: absolute;
+        height: 100%;
+        padding-top: 35px;
+        padding-left: 15px;
+        display: inline-block;        
+      }
+    }
+  }
+  .amount-other-value {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    color: inherit;
+    -webkit-appearance: none;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 20pt;
+    @include brand-font();
+
+    @include min-width($form-medium) {      
+      height: 100%;
+      padding-left: 140px;
+    }
+    
+  }
+
+  .button--round {
+    -webkit-appearance: none;
+    width: 200px;
+    border: 1px solid #883831;
+    background: transparent;
+    border-radius: 30px;
+    font-size: 15pt;
+    padding: 15px 30px;
+    display: block;
+    color: #bbb;
+    margin-left: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background-color: $brand-color;
+      color: white;
+      @include box-shadow-brand();
+    }
+  }
+
+  .clearfix {
+    &:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+
