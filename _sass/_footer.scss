@@ -18,11 +18,13 @@
     &:hover {
       color: #bbb;
     }
-    @include min-width (550px) {
+    @include min-width (700px) {
       display: inline-block;
     }
   }
-
+  .site-footer__nav__link--active {
+    color: $brand-color;
+  }
 
 
 .video-container {

@@ -1,0 +1,56 @@
+
+<div class="section background-color dash-divider">
+  <div class="vert-inner">
+    <div class="inner">
+      <div class="contact-form">
+        <h3 class="header--alternate">Sign up today to become a part of a nationwide network of Zola’s Warriors!</h3>
+        <form id="aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vd2FycmlvcnNAdGhlem9sYWluaXRpYXRpdmUub3Jn"
+          onsubmit="this.action = atob(this.id);"
+          
+          method="POST"
+          action=""
+        >
+
+          <div class="input-container input-container--half">
+            <label for="fn">First Name</label>
+            <input id="fn" type="text" name="FirstName" placeholder="First Name">
+          </div><!--
+      --><div class="input-container input-container--half">
+            <label for="ln">Last Name</label>
+            <input id="ln" type="text" name="LastName" placeholder="Last Name">
+          </div>
+
+          <div class="input-container input-container--full">
+            <label for="em">Email</label>          
+            <input id="em" type="email" name="_replyto" placeholder="Email">
+          </div>
+          
+          <div class="input-container input-container--full">
+            <label for="ms">Message</label>
+            <div id="hidden-height-measure-box" class="hidden-height-measure-box"></div>
+            <textarea id="ms" type="text" name="message" placeholder="Message"></textarea>
+          </div>
+
+          <input id="em" type="text" name="_gotcha" placeholder="title" class="gotcha-input">
+          <input type="hidden" name="_subject" value="New Submission - Zola's Warriors!" />
+          <input type="hidden" name="_next" value="http://thezolainitiative.org/submission-received.html" />
+
+          <button class="button--round">&rarr; Send</button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("load", function() {       
+    var textarea = window.document.getElementById('ms');
+    var measureBox = window.document.getElementById('hidden-height-measure-box');
+    textarea.addEventListener("keyup", function() {          
+      measureBox.innerHTML = textarea.value;
+      textarea.style.height = measureBox.scrollHeight + "px";
+    }, false);
+  }, false);
+</script>

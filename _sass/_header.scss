@@ -23,17 +23,16 @@
   }  
 
   .navtoggle-label {
-    @include min-width (580px) {
+    @include min-width ($nav-breakpoint) {
       display: none;
     }
   }
-
 
   .site-header__nav {
     text-align: center;
     display: none;
     margin-top: 20px;
-    @include min-width (580px) {      
+    @include min-width ($nav-breakpoint) {      
       display: block;
     }  
     @include min-width (800px) {      
@@ -52,8 +51,12 @@
       &:hover {
         color: #bbb;
       }
-      @include min-width (580px) {
+      @include min-width ($nav-breakpoint) {
         display: inline-block;        
       }
+    }
+
+    .site-header__nav__link--active {
+      color: $brand-color;
     }
   

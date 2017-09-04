@@ -246,6 +246,10 @@ pre {
     @include dash-divider();
 }
 
+.text-right {
+    text-align: right;
+}
+
 .background-secondary {
     background-color: $background-secondary;
 }

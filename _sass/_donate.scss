@@ -142,3 +142,69 @@ $form-large: 835px;
     }
   }
 
+
+
+
+
+
+.contact-form {
+  max-width: 800px;
+  margin: auto;
+}
+.input-container {
+  margin-top: 30px;  
+  label {
+    color: $brand-color;
+    display: block;
+    line-height: 1;
+  }
+  input,
+  textarea {
+    -webkit-appearance: none;
+    display: block;    
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $brand-color;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    font-size: 20pt;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    color: #eee;
+  }
+
+  textarea {
+    overflow: hidden;
+    resize: none;
+    box-sizing: content-box;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-family: inherit;
+    line-height: normal;
+    min-height: 32px;
+    height: 32px;
+  }
+  .hidden-height-measure-box {
+    box-sizing: content-box;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    height: 0px;
+    letter-spacing: 1px;
+    font-size: 20pt;
+    line-height: normal;    
+  }
+}
+
+.gotcha-input {
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: none;
+}
+.input-container--half {
+  width: 50%;
+  display: inline-block
+}
