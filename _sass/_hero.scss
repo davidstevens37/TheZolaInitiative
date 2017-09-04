@@ -1,0 +1,122 @@
+.hero-wrapper {
+  // background-color: $background-color;
+  @extend .background-color;
+  position: relative;
+  &:after {
+    @include min-width($on-laptop) {
+      content: '';
+      width: 100px;
+      height: 55px;  
+      display: block;  
+      position: absolute;
+      bottom: 0;
+      left: 0;  
+      background: #ffffff;
+    }
+  }
+}
+
+
+
+.hero {
+  border-top: 4px solid $brand-color;
+  background: url('/images/hero.png'), #050507;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  min-height: 350px;
+  padding-top: 160px;
+  padding-bottom: 40px;
+  color: $text-on-dark;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); // for overlay
+
+  @include min-width($on-laptop) {
+    margin-left: 100px;
+    padding-top: 200px;
+    // background-size: contain;
+    min-height: 600px;
+  }
+
+}
+
+  .hero__content {
+    text-align: center;
+
+    @include min-width($medium) {
+      text-align: left;
+      margin-left: 50%;
+    }
+  }
+
+    .hero__logo {
+      max-width: 200px;
+    }
+    .hero__logo-text {
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin: 10px 0px 50px;
+    }
+
+    .hero__title {
+
+    }
+
+    .hero__text {
+      line-height: 1.2;
+    }
+
+    .hero__media-object {
+
+    }
+
+    .hero__button {
+      margin-top: 40px;
+    }
+
+    // <div class="fact-container">
+    //   <div class="fact">        
+    //     <div class="fact-number">01</div>
+    //     <div class="fact-content">
+    //       <div class="fact-title">Title</div>
+    //       <p class="fact-message">lorem ipsum dolar sit sivas, consector.</p>
+    //     </div>
+    //   </div>
+
+    .fact-container {
+      margin-top: 80px;
+    }
+
+    .fact {
+      @extend %clearfix;
+      max-width: 300px;
+      margin: 20px auto;      
+      @include min-width($medium) {
+        width: 50%;
+        padding-right: 20px;
+        display: inline-block;
+      }
+    }
+      .fact-number {
+        font-family: $brand-font-family;
+        float: left;        
+        width: 15px;
+        border-bottom: 3px solid $brand-color;
+        font-size: .8rem;
+      }
+
+      .fact-content {
+        text-align: left;
+        margin-left: 15px;
+        padding-left: 15px;
+      }
+
+      .fact-title,
+      .fact-message {
+        margin: 0;
+        line-height: 1;
+      }
+
+      .fact-title {
+        @include brand-font();
+        margin-bottom: 5px;
+      }

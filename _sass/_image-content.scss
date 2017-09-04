@@ -1,0 +1,170 @@
+// <div class="image-content">
+//   <div class="image-content__content-container">
+//     <h2 class="image-content__title">Lorem Ipsum Dolar Sit Amet</h2>
+//     <div class="divider-small"></div>
+//     <h2 class="image-content__sub-title">lorem ipsum solar sit</h2>
+//     <p class="image-content__text">lorem ipsum solar sit consector gratis havlair conigralior rostaio. un laboro gazito behavi jnoi alorha bhnoivo aquious hinoi greidi hinioi </p>
+//     <p class="image-content__text"> conigralior rostaio.  lorem ipsum solar sit consector gratis havlair bhnoivo aquious hinoi greidi hinioi. un laboro gazito behavi jnoi alorha sit consector gratis havlair bhnoivo aquious hinoi greidi hinioi. u </p>
+//   </div>
+//   <div class="image-content__image-container">
+//       <div class="image-content__image-wrapper">
+//         <img class="image-content__image" src="" alt="image content image" />
+//       </div>
+//       <p class="image-content__image__description">
+//         ipsum solar sit consector gratis havlair conigralior rostaio. un laboro gazito
+//       </p>
+//   </div>
+
+// </div>
+
+.image-showcase-section {
+  position: relative;
+  padding: 0 30px;  
+  @include min-width($on-palm) {
+    padding: 0;
+  }
+  &:before {
+    content: '';      
+    width: 4px;
+    height: 50px;
+    background-color: $brand-color;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+  }
+}
+
+.image-content {
+
+}
+  .ega {
+    height: 60px;
+    opacity: 0.1;
+  }
+
+  .image-showcase {    
+    text-align: center;
+    padding: 50px 0;    
+  }
+
+  .image-content__content-container {
+    vertical-align: top;
+    padding: 10px;
+    @include min-width($medium) {
+      padding-right: 7%;
+      display: inline-block;
+      width: 40%;
+    }
+  }
+    .image-content__content-divider {
+
+    }
+
+  .image-content__image-container {
+    padding: 10px;
+    @include min-width($medium) {
+      display: inline-block;
+      width: 60%;
+    }
+  }
+  .image-content__image-container--alternate {
+    padding: 10px;
+    @include min-width($medium) {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+    .image-content__image-wrapper {
+      position: relative;
+      padding-right: 30px;
+    }
+    .image-content__image-wrapper--alternate {
+      position: relative;
+      padding-right: 0;
+      padding-left: 30px;
+    }
+    .image-content__image {      
+      position: relative;
+      z-index: 2;
+    }
+    .image-content__text-container {
+      vertical-align: top;
+      @include min-width($medium) {
+        width: 50%;
+        display: inline-block;
+        padding-left: 30px;
+      }
+    }
+    .image-content__image-backdrop {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: -30px;
+      bottom: 30px;
+      background-color: $brand-color;
+      z-index: 1;
+    }
+    .image-content__image-backdrop--alternate {
+      width: 50%;
+      position: absolute;
+      left: 0;
+      top: 30px;
+      bottom: -30px;
+      background-color: $brand-color;
+      z-index: 1;
+    }
+
+    .image-content__image__description {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px solid #e4e4e4;
+    }
+
+
+    .image-showcase__item__title {
+      @include brand-font();
+      color: $text-on-dark;
+    }
+
+    .image-showcase__item {
+      padding: 10%;
+      margin: auto;
+      display: inline-block;
+      background-image: url('/images/tom-and-basilone.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+    .image-showcase__decor {   
+      width: 50px;
+      background: black;
+      position: absolute;
+      height: calc(100% - 180px);
+      display: none;
+      
+      @include min-width(400px) { 
+          display: block;
+      }
+      @include min-width($medium) {
+        height: calc(100% - 260px);
+      }
+    }
+    .image-showcase__decor--previous {         
+      left: 0;   
+    }
+    .image-showcase__decor--next {
+      right: 0;
+    }
+
+
+
+
+
+.divider-small {
+  width: 20px;
+  height: 3px;
+  background-color: $brand-color;
+  margin: 15px 0;
+}

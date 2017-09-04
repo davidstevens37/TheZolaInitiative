@@ -1,0 +1,45 @@
+---
+layout: default
+page_title: About Us
+description: Find out how we're helping the veteran community become a better place
+---
+
+<div class="section background-color">
+  <div class="vert-inner">
+    <div class="inner">
+
+
+      <form method="POST" action="https://www.paypal.com/cgi-bin/webscr">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="R67DAJEM9G7CG">
+        <input type="hidden" name="item_name" value="Donation">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="tax" value="0">
+        <input type="radio" name="amount" value="10" />
+        <input type="radio" name="amount" value="50" />
+        <input type="radio" name="amount" value="100" />
+        <input type="radio" name="amount" value="500" />
+        <input type="radio" class="other-amount" name="amount" value="" />
+
+        <label for="amount">Amount: </label><input type="text" class="other-amount-value">
+
+        <input type="submit" name="submit" value="Pay with PayPal">
+      </form>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  document.querySelector('.other-amount-value').addEventListener('click', function() {
+    document.querySelector('.other-amount').checked = true;
+  });
+
+  document.querySelector('.other-amount-value').addEventListener('keyup', function(e) {
+    document.querySelector('.other-amount').value = e.target.value;
+  console.log(e.target.value);
+  });
+</script>

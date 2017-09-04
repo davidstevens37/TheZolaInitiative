@@ -1,0 +1,41 @@
+<div class="hero-wrapper">
+
+  <div class="hero" style="background-image: url({{ page.hero_image }})">
+    <div class="inner">
+
+      <div class="hero__content">
+
+        {% if page.homepage %}
+        <img class="hero__logo" src="/images/logo-light.png" alt="The Zola Initiative Logo">
+        {% endif %}
+        <p class="brand-font hero__logo-text">{{ page.page_title }}</p>
+
+        <p class="hero__text">
+          {{ page.description }}
+        </p>
+
+        <a href="" class="button hero__button">learn more</a>
+
+        {% if page.homepage %}
+        <div class="fact-container">
+          <div class="fact">        
+            <div class="fact-number">22</div>
+            <div class="fact-content">
+              <h4 class="fact-title">Veterans</h4>
+              <p class="fact-message">Commit suicide each day in the U.S.</p>
+            </div>
+          </div><!--
+      --><div class="fact">        
+            <div class="fact-number">22</div>
+            <div class="fact-content">
+              <h4 class="fact-title">Times</h4>
+              <p class="fact-message">More than are killed in Iraq and Afghanistan </p>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>

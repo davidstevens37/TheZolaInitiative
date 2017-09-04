@@ -1,0 +1,96 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@font-face {
+    font-family: OctinPrisonRG;
+    src: url('/fonts/octin-prison-rg.ttf');
+}
+
+@font-face {
+    font-family: OctinPrisonRG;
+    src: url('/fonts/octin-prison-b-rg.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: MuseoSans;
+    src: url('/fonts/Museo Sans/500/museosans_500-webfont.ttf');
+}
+
+
+// Our variables
+$base-font-family: "MuseoSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.2;
+
+$brand-font-family: "OctinPrisonRG", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$spacing-unit:     30px;
+
+$body-color:       #ffffff;
+$background-color: #1e1f21;
+$background-secondary: #fff;
+
+$text-color:       #111;
+$text-on-dark:     #fff;
+$text-light:       lighten($text-color, 40%);
+
+$brand-color:      #883831;
+$brand-color-dark:  darken($brand-color, 10%);
+$brand-color-light: lighten($brand-color, 10%);
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+$medium:           600px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin min-width($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+@mixin brand-font() {
+    font-family: $brand-font-family;
+    letter-spacing: 2px;
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "header",
+        "hero",
+        "image-content",
+        "call-to-action",
+        "events",
+        "footer",
+        "syntax-highlighting"
+;

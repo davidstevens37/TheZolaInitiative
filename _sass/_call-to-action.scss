@@ -1,0 +1,14 @@
+.call-to-action {
+  border-bottom: 1px solid gainsboro;
+  .third {
+    @include min-width($on-laptop) {
+      display: inline-block;
+      width: 32%;
+      vertical-align: top;
+      padding: 0 10px;
+    }
+  }
+}
+  .call-to-action-button-container {
+    text-align: center;
+  }
