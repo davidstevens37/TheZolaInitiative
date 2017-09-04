@@ -242,6 +242,9 @@ pre {
     }
 }
 
+.dash-divider {
+    @include dash-divider();
+}
 
 .background-secondary {
     background-color: $background-secondary;

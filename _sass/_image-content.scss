@@ -18,21 +18,11 @@
 // </div>
 
 .image-showcase-section {
-  position: relative;
   padding: 0 30px;  
+  @include dash-divider();
   @include min-width($on-palm) {
     padding: 0;
-  }
-  &:before {
-    content: '';      
-    width: 4px;
-    height: 50px;
-    background-color: $brand-color;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);  
-  }
+  }  
 }
 
 .image-content {
