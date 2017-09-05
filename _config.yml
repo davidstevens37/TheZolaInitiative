@@ -9,9 +9,9 @@
 title: The Zola Initiative
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Zola Initiative aims to be an early preventative measure to veteran’s
+  suicide, by connecting veterans in their communities and building a strong,
+  local, accessible support system.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thezolainitiative.org" # the base hostname & protocol for your site
 twitter_username: jekyllrb
