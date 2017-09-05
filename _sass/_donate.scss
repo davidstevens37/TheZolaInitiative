@@ -206,6 +206,8 @@ $form-large: 835px;
   border: none;
 }
 .input-container--half {
-  width: 50%;
-  display: inline-block
+  @include min-width(450px) {
+    width: 50%;
+    display: inline-block;    
+  }
 }
