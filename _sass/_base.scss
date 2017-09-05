@@ -242,6 +242,12 @@ pre {
     }
 }
 
+.link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;    
+}
+
 .dash-divider {
     @include dash-divider();
 }
