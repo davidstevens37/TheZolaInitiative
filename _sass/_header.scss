@@ -44,19 +44,24 @@
     display: block;
   }
     .site-header__nav__link {
-      color: $text-on-dark;
+      color: #bbb;
       padding: 10px;
       text-decoration: none;
-      display: block;
-      &:hover {
-        color: #bbb;
-      }
+      display: block;      
       @include min-width ($nav-breakpoint) {
         display: inline-block;        
       }
     }
 
+    .site-header__nav__link:hover,
     .site-header__nav__link--active {
-      color: $brand-color;
+      color: $text-on-dark;
+    }
+    .site-header__nav__link--distinguished {
+      color: $brand-color;      
+    }    
+    .site-header__nav__link--distinguished--active,
+    .site-header__nav__link--distinguished:hover {
+        color: $brand-color-light;
     }
   

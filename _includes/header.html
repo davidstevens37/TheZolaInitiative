@@ -6,16 +6,15 @@
     </label>
     <a class="site-title" href="{{ site.baseurl }}/"><img class="site-header__logo" src="/images/logo-light.png" alt="The Zola Initiative Logo" /></a>
   </div>
-
   <div class="inner">
     <input id="navtoggle" type="checkbox" style="display: none;" />
     <nav class="site-header__nav">
-      <a href="/" class="site-header__nav__link">Home</a>
-      <a href="/about" class="site-header__nav__link">About Us</a>
-      <a href="/story" class="site-header__nav__link">His Story</a>
-      <a href="/events" class="site-header__nav__link">Events</a>
-      <a href="/zolas-warriors" class="site-header__nav__link">Zola's Warriors</a>
-      <a href="/donate" class="site-header__nav__link site-header__nav__link--active">Donate</a>
+      <a href="/" class="site-header__nav__link {% if page.name == 'index.html' %}site-header__nav__link--active{% endif %}">Home</a>
+      <a href="/about" class="site-header__nav__link {% if page.name == 'about.html' %}site-header__nav__link--active{% endif %}">About Us</a>
+      <a href="/story" class="site-header__nav__link {% if page.name == 'story.html' %}site-header__nav__link--active{% endif %}">His Story</a>
+      <a href="/events" class="site-header__nav__link {% if page.name == 'events.html' %}site-header__nav__link--active{% endif %}">Events</a>
+      <a href="/zolas-warriors" class="site-header__nav__link {% if page.name == 'zolas-warriors.html' %}site-header__nav__link--active{% endif %}">Zola's Warriors</a>
+      <a href="/donate" class="site-header__nav__link site-header__nav__link--distinguished  {% if page.name == 'donate.html' %}site-header__nav__link--distinguished--active{% endif %}">Donate</a>
     </nav>
   </div>
 
