@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="event-details">
+
+  <img class="event-details__image" src="{{ page.image }}" />
+
+  <div class="event-details__details">
+
+    <dl>
+      <dt>What:</dt>
+      <dd>{{ page.name }}</dd>
+    </dl>
+
+    <dl>
+      <dt>When:</dt>
+      <dd>{{ page.when_date }} at {{ page.when_time }}</dd>   
+    </dl>
+
+    <dl>
+      <dt>Where:</dt>
+      <dd>{{ page.location_name }}</dd>
+      <dd>{{ page.address_street }}</dd>
+      <dd>{{ page.address_city_state_zip }}</dd>
+    </dl>
+
+    <dl>
+      <dt>Details:</dt>
+      <dd>{{ content }}</dd>    
+    </dl>
+  </div>
+
+</div>
+

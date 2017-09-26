@@ -19,3 +19,18 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+collections:
+  event:
+    output: true
+    permalink: /event/:year/:month/:day/:title
+
+defaults:
+  - scope:
+      path: ""
+      type: event
+    values:
+      is_event: true
+      page_title: Event Details
+      hero_image: /images/runway.jpg
+      layout: event

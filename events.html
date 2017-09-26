@@ -12,6 +12,26 @@ hero_image: /images/runway.jpg
       <h2 class="header">
         We currently have several fundraisers and veteran community outreach events in the works!  Stay tuned for dates and information!
       </h2>    
+      <div class="events-list">
+      
+        {% for event in site.event %}        
+            <a href="{{ event.url }}" class="event-list__item-wrapper">
+              <div class="event-list__item">
+                <div class="event-list__item__picture" style="background-image: url({{ event.image }})"></div>
+                <div class="event-list__item__details">
+                  <h4 class="event-list__item__details__title">{{ event.name }}</h4>
+                  <div class="event-list__item__details__date-time-container">
+                    <span class="event-list__item__details__date-time event-list__item__details__date-time--date">{{ event.when_date }}</span> &mdash;
+                    <span class="event-list__item__details__date-time event-list__item__details__date-time--time">{{ event.when_time }}</span>
+                  </div>
+                  <p class="event-list__item__details__location-name">{{ event.location_name }}</p>
+                  <div class="event-list__item__details__description">{{ event.excerpt }}</div>
+                </div>
+              </div>
+            </a>          
+        {% endfor %}
+
+      </div>
 
     </div>
   </div>
