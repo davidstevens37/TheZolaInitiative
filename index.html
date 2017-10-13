@@ -69,20 +69,27 @@ homepage: true
 
 
 <div class="section background-color">  
+  
+
   <div class="events-container">
-    <div class="event event--one" style="background-image: url(/images/event-party.jpg)">
+    {% for event in site.event | sort: 'url' limit:3 %}     
+      {% if event.is_active %}            
+        <a href="{{ event.url }}">
+          <div class="event event--one" style="background-image: url({{ event.image }})">
+            <img class="event__icon" src="/images/event.png" />
+            <div class="event__title brand-font">{{ event.name }}</div>
+            <div class="event__title">{{ event.when_date }}</div>
+          </div>
+        </a>
+      {% endif %}  
+    {% endfor %}  
+    <!-- <div class="event event--two" style="background-image: url(/images/event-arch.png)">
       <img class="event__icon" src="/images/event.png" />
       <div class="event__title brand-font">Coming Soon!</div>
-    </div>
-    <div class="event event--two" style="background-image: url(/images/event-arch.png)">
-      <img class="event__icon" src="/images/event.png" />
-      <div class="event__title brand-font">Coming Soon!</div>
-    </div>
-    <div class="event event--three" style="background-image: url(/images/event-lake.png)">
-      <img class="event__icon" src="/images/event.png" />
-      <div class="event__title brand-font">Coming Soon!</div>
-    </div>
+    </div> -->
+    
   </div>
 </div>
+  
 
 {% include donate.html %}
