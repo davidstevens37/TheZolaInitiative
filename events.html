@@ -1,7 +1,7 @@
 ---
 layout: default
 page_title: Events 
-description: Coming Soon... Stay tuned!
+description: Join Us at an Upcoming Event!
 hero_image: /images/runway.jpg
 ---
 
@@ -10,11 +10,12 @@ hero_image: /images/runway.jpg
     <div class="inner">
 
       <h2 class="header">
-        We currently have several fundraisers and veteran community outreach events in the works!  Stay tuned for dates and information!
+        Upcoming Events
       </h2>    
       <div class="events-list">
-      
-        {% for event in site.event %}        
+
+        {% for event in site.event | sort: 'url'  %}
+          {% if event.is_active %}            
             <a href="{{ event.url }}" class="event-list__item-wrapper">
               <div class="event-list__item">
                 <div class="event-list__item__picture" style="background-image: url({{ event.image }})"></div>
@@ -28,7 +29,11 @@ hero_image: /images/runway.jpg
                   <div class="event-list__item__details__description">{{ event.excerpt }}</div>
                 </div>
               </div>
-            </a>          
+            </a>    
+          {% endif %}
+        {% else %}
+          <h2>We currently have several fundraisers and veteran community outreach events in the works!  Stay tuned for dates and information!</h2>
+          <p>Check back soon for new events!</p> 
         {% endfor %}
 
       </div>
